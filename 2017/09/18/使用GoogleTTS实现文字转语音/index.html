@@ -79,10 +79,12 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Android," />
 
 
 
+
+  
 
 
   <link rel="alternate" href="/atom.xml" title="MR_WIND的博客" type="application/atom+xml" />
@@ -97,13 +99,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="MR_WIND的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="TTS–TextToSpeechTextToSpeech指的是文字转语音技术。随着人工智能的发展，现在很多智能设备都开始支持语音输出功能了。对应APP开发来说，让机器说话，已经是一项很常见的需求了。目前有很多相关方面的API供大家选择。国内比较出名的比如讯飞的开放平台，提供了一套比较完整的SDK。 其实，Android系统本身是直接支持TTS的。大部分应该是在「设置」–「语言和输入法」里找到TT">
+<meta name="keywords" content="Android">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用GoogleTTS实现文字转语音">
+<meta property="og:url" content="http://yoursite.com/2017/09/18/使用GoogleTTS实现文字转语音/index.html">
 <meta property="og:site_name" content="MR_WIND的博客">
+<meta property="og:description" content="TTS–TextToSpeechTextToSpeech指的是文字转语音技术。随着人工智能的发展，现在很多智能设备都开始支持语音输出功能了。对应APP开发来说，让机器说话，已经是一项很常见的需求了。目前有很多相关方面的API供大家选择。国内比较出名的比如讯飞的开放平台，提供了一套比较完整的SDK。 其实，Android系统本身是直接支持TTS的。大部分应该是在「设置」–「语言和输入法」里找到TT">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-09-18T10:14:51.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MR_WIND的博客">
+<meta name="twitter:title" content="使用GoogleTTS实现文字转语音">
+<meta name="twitter:description" content="TTS–TextToSpeechTextToSpeech指的是文字转语音技术。随着人工智能的发展，现在很多智能设备都开始支持语音输出功能了。对应APP开发来说，让机器说话，已经是一项很常见的需求了。目前有很多相关方面的API供大家选择。国内比较出名的比如讯飞的开放平台，提供了一套比较完整的SDK。 其实，Android系统本身是直接支持TTS的。大部分应该是在「设置」–「语言和输入法」里找到TT">
 
 
 
@@ -133,13 +140,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/09/18/使用GoogleTTS实现文字转语音/"/>
 
 
 
 
 
-  <title>MR_WIND的博客</title>
+  <title>使用GoogleTTS实现文字转语音 | MR_WIND的博客</title>
   
 
 
@@ -158,8 +165,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -232,9 +238,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -264,9 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/18/使用GoogleTTS实现文字转语音/" itemprop="url">使用GoogleTTS实现文字转语音</a></h1>
+          <h1 class="post-title" itemprop="name headline">使用GoogleTTS实现文字转语音</h1>
         
 
         <div class="post-meta">
@@ -316,9 +320,7 @@
       
 
       
-        
-          
-            <h3 id="TTS–TextToSpeech"><a href="#TTS–TextToSpeech" class="headerlink" title="TTS–TextToSpeech"></a>TTS–TextToSpeech</h3><p>TextToSpeech指的是文字转语音技术。随着人工智能的发展，现在很多智能设备都开始支持语音输出功能了。对应APP开发来说，让机器说话，已经是一项很常见的需求了。目前有很多相关方面的API供大家选择。国内比较出名的比如讯飞的开放平台，提供了一套比较完整的SDK。</p>
+        <h3 id="TTS–TextToSpeech"><a href="#TTS–TextToSpeech" class="headerlink" title="TTS–TextToSpeech"></a>TTS–TextToSpeech</h3><p>TextToSpeech指的是文字转语音技术。随着人工智能的发展，现在很多智能设备都开始支持语音输出功能了。对应APP开发来说，让机器说话，已经是一项很常见的需求了。目前有很多相关方面的API供大家选择。国内比较出名的比如讯飞的开放平台，提供了一套比较完整的SDK。</p>
 <p>其实，Android系统本身是直接支持TTS的。大部分应该是在「设置」–「语言和输入法」里找到TTS相关的设置。国内可能由于各个厂商手机定制的ROM的不同，TTS里也会有不同预装的引擎。这些引擎能够提供给一些APP来使用，比如，某些阅读类APP是支持朗读功能的，大部分情况下，这类APP会使用系统的TTS来完成一个「文字」-&gt;「语音」的过程，来实现功能。</p>
 <p>比如在项目中，需要这么一个功能，能够将交易完成时的金额实时的播报出来。通过Android系统的TTS功能就能比较快速的实现了。</p>
 <h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><ol>
@@ -342,8 +344,6 @@
 </ul>
 <p>最后给一个供参考的工具类<a href="https://gist.github.com/mr-wind/a20c343febf3cd3f9318a46191350157" target="_blank" rel="external">SpeakerUtil.java</a></p>
 
-          
-        
       
     </div>
     
@@ -358,296 +358,36 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/14/hexo_default/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="MR_WIND">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="MR_WIND的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/14/hexo_default/" itemprop="url">Hexo</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-14T15:29:55+08:00">
-                2017-09-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/Android/" rel="tag"># Android</a>
           
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
       
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/25/自定义键盘/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="MR_WIND">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="MR_WIND的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/02/25/自定义键盘/" itemprop="url">自定义键盘</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-25T18:54:16+08:00">
-                2017-02-25
-              </time>
+              <a href="/2017/09/14/hexo_default/" rel="next" title="Hexo">
+                <i class="fa fa-chevron-left"></i> Hexo
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <h3 id="UI布局"><a href="#UI布局" class="headerlink" title="UI布局"></a>UI布局</h3><p>在xml包（如果没有，自己在res包下新建一个）中创建一个键盘布局<a href="https://gist.github.com/mr-wind/40a3a90626f1f699be43cf43de8073c7" target="_blank" rel="external">num_keyboard_nine.xml</a></p>
-<ul>
-<li>Keyboard基本需要设置每个按键的width和height，还有Gap</li>
-<li>设置Row，设计每一行的键盘</li>
-<li>设置codes，主要是键盘上的字符的ASCII码</li>
-<li>设置keyLabel，用于显示在键盘上</li>
-<li>设置keyIcon，用图标代替lable显示（不能跟keyLabel同时使用）</li>
-<li>设置isRepeatable,设置是否长按时，可以重复输入</li>
-<li>设置keyEdgeFlag，设置该键的边界</li>
-<li><strong>问题1：</strong> keyLabel的字符个数若大于1，那么该按键的字体显示效果，将于默认的不同。字体会缩小，并且是加粗字体。</li>
-<li><p><strong>解决：</strong> 以上的问题找了很多资料，后来发现在源码中有这么一段:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">// For characters, use large font. For labels like &quot;Done&quot;, use small font.</div><div class="line">if (label.length() &gt; 1 &amp;&amp; key.codes.length &lt; 2) &#123;</div><div class="line">    paint.setTextSize(mLabelTextSize);</div><div class="line">    paint.setTypeface(Typeface.DEFAULT_BOLD);</div><div class="line">&#125; else &#123;</div><div class="line">    paint.setTextSize(mKeyTextSize);</div><div class="line">    paint.setTypeface(Typeface.DEFAULT);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>从上面的源码可以看到，官方在这里做了一些处理。所以，咱们可以设置codes的个数大于两个从而绕过这一段代码。</p>
-<h3 id="layout中使用View"><a href="#layout中使用View" class="headerlink" title="layout中使用View"></a>layout中使用View</h3><p>主要是用到keyboardView或者自定义一个view继承自keyboardView。下面用原生控件来举例。</p>
-</li>
-<li><p>直接使用官方的keyboardView。注意使用<android.inputmethodservice.keyboardview>标签来引用大概如下</android.inputmethodservice.keyboardview></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&lt;android.inputmethodservice.KeyboardView</div><div class="line">    android:id=&quot;@+id/keyboard_nine&quot;</div><div class="line">    android:layout_width=&quot;wrap_content&quot;</div><div class="line">    android:layout_height=&quot;wrap_content&quot;</div><div class="line">    android:background=&quot;@color/keyBoard&quot;</div><div class="line">    android:focusable=&quot;true&quot;</div><div class="line">    android:focusableInTouchMode=&quot;true&quot;</div><div class="line">    android:keyBackground=&quot;@drawable/keyback&quot;</div><div class="line">    android:keyTextColor=&quot;@color/keyColor&quot;</div><div class="line">    android:keyTextSize=&quot;@dimen/font_24&quot;</div><div class="line">    android:shadowRadius=&quot;0.0&quot;</div><div class="line">    android:visibility=&quot;gone&quot;&gt;</div><div class="line">&lt;/android.inputmethodservice.KeyboardView&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>keyBackground，设置按键的背景</p>
-</li>
-<li><p>创建的时候需要在OnCreate中使用</p>
-<ol>
-<li><p>new一个键盘布局，并引用自己定义的键盘布局</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Keyboard keyboard = new Keyboard(getContext(),R.xml.num_keyboard_nine);</div></pre></td></tr></table></figure>
-</li>
-<li><p>将KeyboardView与布局绑定</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mKeyboardView = (KeyboardView)findViewById(R.id.keyboard_nine);</div><div class="line">mKeyboardView.setKeyboard(keyboard);</div></pre></td></tr></table></figure>
-</li>
-<li><p>使用自定义的CustomKeyboard进行组装</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">customKeyboard = new CustomKeyboard(getActivity(), keyboard, mKeyboardView);</div></pre></td></tr></table></figure>
-</li>
-</ol>
-</li>
-</ul>
-<h3 id="自定义类进行封装"><a href="#自定义类进行封装" class="headerlink" title="自定义类进行封装"></a>自定义类进行封装</h3><p>使用自定义的组装类，可以大幅度实现案件功能上的自定义<br><a href="https://gist.github.com/mr-wind/8d5e94a74f66c110cdf40b1dd426e0e7" target="_blank" rel="external">CustomKeyboard.java</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -657,10 +397,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -668,6 +409,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -688,8 +433,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <p class="site-author-name" itemprop="name">MR_WIND</p>
@@ -748,6 +502,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#TTS–TextToSpeech"><span class="nav-number">1.</span> <span class="nav-text">TTS–TextToSpeech</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#准备工作"><span class="nav-number">2.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码实现"><span class="nav-number">3.</span> <span class="nav-text">代码实现</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -868,6 +638,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
 
   
 

@@ -79,10 +79,12 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Android," />
 
 
 
+
+  
 
 
   <link rel="alternate" href="/atom.xml" title="MR_WIND的博客" type="application/atom+xml" />
@@ -97,17 +99,18 @@
 
 
 
-<meta name="description" content="UI布局在xml包（如果没有，自己在res包下新建一个）中创建一个键盘布局num_keyboard_nine.xml  Keyboard基本需要设置每个按键的width和height，还有Gap 设置Row，设计每一行的键盘 设置codes，主要是键盘上的字符的ASCII码 设置keyLabel，用于显示在键盘上 设置keyIcon，用图标代替lable显示（不能跟keyLabel同时使用） 设置">
+<meta name="description" content="applicationIdSuffix配置可能会遇到的坑 在配置不同的buildType时，可能会使用applicationIdSuffix来进行debug和release等版本的区分。对于有些需要在manifest文件中配置包名的第三方SDK来说，可能会有些影响。此时，在相应的buildType下可以用defaultConfig.applicationId + applicationId">
+<meta name="keywords" content="Android">
 <meta property="og:type" content="article">
-<meta property="og:title" content="自定义键盘">
-<meta property="og:url" content="http://yoursite.com/2017/02/25/自定义键盘/index.html">
+<meta property="og:title" content="Android笔记">
+<meta property="og:url" content="http://yoursite.com/2018/02/01/android笔记/index.html">
 <meta property="og:site_name" content="MR_WIND的博客">
-<meta property="og:description" content="UI布局在xml包（如果没有，自己在res包下新建一个）中创建一个键盘布局num_keyboard_nine.xml  Keyboard基本需要设置每个按键的width和height，还有Gap 设置Row，设计每一行的键盘 设置codes，主要是键盘上的字符的ASCII码 设置keyLabel，用于显示在键盘上 设置keyIcon，用图标代替lable显示（不能跟keyLabel同时使用） 设置">
+<meta property="og:description" content="applicationIdSuffix配置可能会遇到的坑 在配置不同的buildType时，可能会使用applicationIdSuffix来进行debug和release等版本的区分。对于有些需要在manifest文件中配置包名的第三方SDK来说，可能会有些影响。此时，在相应的buildType下可以用defaultConfig.applicationId + applicationId">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-15T02:33:31.000Z">
+<meta property="og:updated_time" content="2018-02-01T05:58:07.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="自定义键盘">
-<meta name="twitter:description" content="UI布局在xml包（如果没有，自己在res包下新建一个）中创建一个键盘布局num_keyboard_nine.xml  Keyboard基本需要设置每个按键的width和height，还有Gap 设置Row，设计每一行的键盘 设置codes，主要是键盘上的字符的ASCII码 设置keyLabel，用于显示在键盘上 设置keyIcon，用图标代替lable显示（不能跟keyLabel同时使用） 设置">
+<meta name="twitter:title" content="Android笔记">
+<meta name="twitter:description" content="applicationIdSuffix配置可能会遇到的坑 在配置不同的buildType时，可能会使用applicationIdSuffix来进行debug和release等版本的区分。对于有些需要在manifest文件中配置包名的第三方SDK来说，可能会有些影响。此时，在相应的buildType下可以用defaultConfig.applicationId + applicationId">
 
 
 
@@ -137,13 +140,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/25/自定义键盘/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/02/01/android笔记/"/>
 
 
 
 
 
-  <title>自定义键盘 | MR_WIND的博客</title>
+  <title>Android笔记 | MR_WIND的博客</title>
   
 
 
@@ -250,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/25/自定义键盘/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/01/android笔记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="MR_WIND">
@@ -267,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">自定义键盘</h1>
+          <h1 class="post-title" itemprop="name headline">Android笔记</h1>
         
 
         <div class="post-meta">
@@ -279,8 +282,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-02-25T18:54:16+08:00">
-                2017-02-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-01T13:43:50+08:00">
+                2018-02-01
               </time>
             
 
@@ -317,41 +320,20 @@
       
 
       
-        <h3 id="UI布局"><a href="#UI布局" class="headerlink" title="UI布局"></a>UI布局</h3><p>在xml包（如果没有，自己在res包下新建一个）中创建一个键盘布局<a href="https://gist.github.com/mr-wind/40a3a90626f1f699be43cf43de8073c7" target="_blank" rel="external">num_keyboard_nine.xml</a></p>
-<ul>
-<li>Keyboard基本需要设置每个按键的width和height，还有Gap</li>
-<li>设置Row，设计每一行的键盘</li>
-<li>设置codes，主要是键盘上的字符的ASCII码</li>
-<li>设置keyLabel，用于显示在键盘上</li>
-<li>设置keyIcon，用图标代替lable显示（不能跟keyLabel同时使用）</li>
-<li>设置isRepeatable,设置是否长按时，可以重复输入</li>
-<li>设置keyEdgeFlag，设置该键的边界</li>
-<li><strong>问题1：</strong> keyLabel的字符个数若大于1，那么该按键的字体显示效果，将于默认的不同。字体会缩小，并且是加粗字体。</li>
-<li><p><strong>解决：</strong> 以上的问题找了很多资料，后来发现在源码中有这么一段:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">// For characters, use large font. For labels like &quot;Done&quot;, use small font.</div><div class="line">if (label.length() &gt; 1 &amp;&amp; key.codes.length &lt; 2) &#123;</div><div class="line">    paint.setTextSize(mLabelTextSize);</div><div class="line">    paint.setTypeface(Typeface.DEFAULT_BOLD);</div><div class="line">&#125; else &#123;</div><div class="line">    paint.setTextSize(mKeyTextSize);</div><div class="line">    paint.setTypeface(Typeface.DEFAULT);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>从上面的源码可以看到，官方在这里做了一些处理。所以，咱们可以设置codes的个数大于两个从而绕过这一段代码。</p>
-<h3 id="layout中使用View"><a href="#layout中使用View" class="headerlink" title="layout中使用View"></a>layout中使用View</h3><p>主要是用到keyboardView或者自定义一个view继承自keyboardView。下面用原生控件来举例。</p>
+        <h2 id="applicationIdSuffix配置可能会遇到的坑"><a href="#applicationIdSuffix配置可能会遇到的坑" class="headerlink" title="applicationIdSuffix配置可能会遇到的坑"></a>applicationIdSuffix配置可能会遇到的坑</h2><ul>
+<li><p>在配置不同的buildType时，可能会使用applicationIdSuffix来进行debug和release等版本的区分。对于有些需要在manifest文件中配置包名的第三方SDK来说，可能会有些影响。此时，在相应的buildType下可以用defaultConfig.applicationId + applicationIdSuffix来获取包名的配置(以极光推送的配置为例)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&apos;JPUSH_PKGNAME&apos;:defaultConfig.applicationId + applicationIdSuffix</div></pre></td></tr></table></figure>
 </li>
-<li><p>直接使用官方的keyboardView。注意使用<android.inputmethodservice.keyboardview>标签来引用大概如下</android.inputmethodservice.keyboardview></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&lt;android.inputmethodservice.KeyboardView</div><div class="line">    android:id=&quot;@+id/keyboard_nine&quot;</div><div class="line">    android:layout_width=&quot;wrap_content&quot;</div><div class="line">    android:layout_height=&quot;wrap_content&quot;</div><div class="line">    android:background=&quot;@color/keyBoard&quot;</div><div class="line">    android:focusable=&quot;true&quot;</div><div class="line">    android:focusableInTouchMode=&quot;true&quot;</div><div class="line">    android:keyBackground=&quot;@drawable/keyback&quot;</div><div class="line">    android:keyTextColor=&quot;@color/keyColor&quot;</div><div class="line">    android:keyTextSize=&quot;@dimen/font_24&quot;</div><div class="line">    android:shadowRadius=&quot;0.0&quot;</div><div class="line">    android:visibility=&quot;gone&quot;&gt;</div><div class="line">&lt;/android.inputmethodservice.KeyboardView&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>keyBackground，设置按键的背景</p>
-</li>
-<li><p>创建的时候需要在OnCreate中使用</p>
-<ol>
-<li><p>new一个键盘布局，并引用自己定义的键盘布局</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Keyboard keyboard = new Keyboard(getContext(),R.xml.num_keyboard_nine);</div></pre></td></tr></table></figure>
-</li>
-<li><p>将KeyboardView与布局绑定</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mKeyboardView = (KeyboardView)findViewById(R.id.keyboard_nine);</div><div class="line">mKeyboardView.setKeyboard(keyboard);</div></pre></td></tr></table></figure>
-</li>
-<li><p>使用自定义的CustomKeyboard进行组装</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">customKeyboard = new CustomKeyboard(getActivity(), keyboard, mKeyboardView);</div></pre></td></tr></table></figure>
-</li>
-</ol>
+<li><p>在配置过manifest文件后，可以切换视图来查看项目所有gradle文件混合后的manifest文件，点击不同的条目能看到详细的配置路径等。</p>
 </li>
 </ul>
-<h3 id="自定义类进行封装"><a href="#自定义类进行封装" class="headerlink" title="自定义类进行封装"></a>自定义类进行封装</h3><p>使用自定义的组装类，可以大幅度实现案件功能上的自定义<br><a href="https://gist.github.com/mr-wind/8d5e94a74f66c110cdf40b1dd426e0e7" target="_blank" rel="external">CustomKeyboard.java</a></p>
+<h2 id="sourceSets的一些配置"><a href="#sourceSets的一些配置" class="headerlink" title="sourceSets的一些配置"></a>sourceSets的一些配置</h2><ul>
+<li><p>在build.gradle的配置中，可以针对不同的buildType或者不同的productFlavors进行特定的资源的配置。默认情况下，会使用main下的配置。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">sourceSets &#123;</div><div class="line">    debug &#123;</div><div class="line">      res.srcDirs = [&apos;src/debug/res&apos;]</div><div class="line">      jniLibs.srcDirs = [&apos;jniLibs&apos;]</div><div class="line">      assets.srcDirs = [&apos;src/debug/assets&apos;]</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    main &#123;</div><div class="line">      res.srcDirs = [&apos;src/main/res&apos;]</div><div class="line">      jniLibs.srcDirs = [&apos;jniLibs&apos;]</div><div class="line">      assets.srcDirs = [&apos;src/main/assets&apos;]</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>新建assets等文件夹时，可以通过右键点击项目路径生成，Android Studio会在新建文件夹的时候给出一些配置提示</p>
+</li>
+</ul>
 
       
     </div>
@@ -367,6 +349,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Android/" rel="tag"># Android</a>
+          
+        </div>
+      
 
       
       
@@ -376,15 +364,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/09/19/Gradle的一些配置技巧/" rel="next" title="一些有用的Gradle配置代码">
+                <i class="fa fa-chevron-left"></i> 一些有用的Gradle配置代码
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/09/14/hexo_default/" rel="prev" title="Hexo">
-                Hexo <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -515,7 +503,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#UI布局"><span class="nav-number">1.</span> <span class="nav-text">UI布局</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#layout中使用View"><span class="nav-number">2.</span> <span class="nav-text">layout中使用View</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义类进行封装"><span class="nav-number">3.</span> <span class="nav-text">自定义类进行封装</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#applicationIdSuffix配置可能会遇到的坑"><span class="nav-number">1.</span> <span class="nav-text">applicationIdSuffix配置可能会遇到的坑</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sourceSets的一些配置"><span class="nav-number">2.</span> <span class="nav-text">sourceSets的一些配置</span></a></li></ol></div>
             
 
           </div>

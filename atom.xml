@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-09-19T09:50:03.000Z</updated>
+  <updated>2018-02-01T05:58:07.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Android笔记</title>
+    <link href="http://yoursite.com/2018/02/01/android%E7%AC%94%E8%AE%B0/"/>
+    <id>http://yoursite.com/2018/02/01/android笔记/</id>
+    <published>2018-02-01T05:43:50.000Z</published>
+    <updated>2018-02-01T05:58:07.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="applicationIdSuffix配置可能会遇到的坑"><a href="#applicationIdSuffix配置可能会遇到的坑" class="headerlink" title="applicationIdSuffix配置可能会遇到的坑"></a>applicationIdSuffix配置可能会遇到的坑</h2><ul><li><p>在配置不同的buildType时，可能会使用applicationIdSuffix来进行debug和release等版本的区分。对于有些需要在manifest文件中配置包名的第三方SDK来说，可能会有些影响。此时，在相应的buildType下可以用defaultConfig.applicationId + applicationIdSuffix来获取包名的配置(以极光推送的配置为例)</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&apos;JPUSH_PKGNAME&apos;:defaultConfig.applicationId + applicationIdSuffix</div></pre></td></tr></table></figure></li><li><p>在配置过manifest文件后，可以切换视图来查看项目所有gradle文件混合后的manifest文件，点击不同的条目能看到详细的配置路径等。</p></li></ul><h2 id="sourceSets的一些配置"><a href="#sourceSets的一些配置" class="headerlink" title="sourceSets的一些配置"></a>sourceSets的一些配置</h2><ul><li><p>在build.gradle的配置中，可以针对不同的buildType或者不同的productFlavors进行特定的资源的配置。默认情况下，会使用main下的配置。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">sourceSets &#123;</div><div class="line">    debug &#123;</div><div class="line">      res.srcDirs = [&apos;src/debug/res&apos;]</div><div class="line">      jniLibs.srcDirs = [&apos;jniLibs&apos;]</div><div class="line">      assets.srcDirs = [&apos;src/debug/assets&apos;]</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    main &#123;</div><div class="line">      res.srcDirs = [&apos;src/main/res&apos;]</div><div class="line">      jniLibs.srcDirs = [&apos;jniLibs&apos;]</div><div class="line">      assets.srcDirs = [&apos;src/main/assets&apos;]</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></li><li><p>新建assets等文件夹时，可以通过右键点击项目路径生成，Android Studio会在新建文件夹的时候给出一些配置提示</p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;applicationIdSuffix配置可能会遇到的坑&quot;&gt;&lt;a href=&quot;#applicationIdSuffix配置可能会遇到的坑&quot; class=&quot;headerlink&quot; title=&quot;applicationIdSuffix配置可能会遇到的坑&quot;&gt;&lt;/a&gt;ap
+      
+    
+    </summary>
+    
+    
+      <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
+    
+  </entry>
   
   <entry>
     <title>一些有用的Gradle配置代码</title>

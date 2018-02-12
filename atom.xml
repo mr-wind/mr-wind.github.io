@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://mr-wind.github.io/"/>
   <updated>2018-02-01T05:58:07.000Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://mr-wind.github.io/</id>
   
   <author>
     <name>MR_WIND</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Android笔记</title>
-    <link href="http://yoursite.com/2018/02/01/android%E7%AC%94%E8%AE%B0/"/>
-    <id>http://yoursite.com/2018/02/01/android笔记/</id>
+    <link href="https://mr-wind.github.io/2018/02/01/android%E7%AC%94%E8%AE%B0/"/>
+    <id>https://mr-wind.github.io/2018/02/01/android笔记/</id>
     <published>2018-02-01T05:43:50.000Z</published>
     <updated>2018-02-01T05:58:07.000Z</updated>
     
@@ -35,14 +35,14 @@
     </summary>
     
     
-      <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
+      <category term="Android" scheme="https://mr-wind.github.io/tags/Android/"/>
     
   </entry>
   
   <entry>
     <title>Gradle配置技巧</title>
-    <link href="http://yoursite.com/2017/09/19/Gradle%E9%85%8D%E7%BD%AE%E6%8A%80%E5%B7%A7/"/>
-    <id>http://yoursite.com/2017/09/19/Gradle配置技巧/</id>
+    <link href="https://mr-wind.github.io/2017/09/19/Gradle%E9%85%8D%E7%BD%AE%E6%8A%80%E5%B7%A7/"/>
+    <id>https://mr-wind.github.io/2017/09/19/Gradle配置技巧/</id>
     <published>2017-09-19T03:34:55.000Z</published>
     <updated>2018-02-12T08:23:46.656Z</updated>
     
@@ -58,14 +58,14 @@
     </summary>
     
     
-      <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
+      <category term="Android" scheme="https://mr-wind.github.io/tags/Android/"/>
     
   </entry>
   
   <entry>
     <title>使用GoogleTTS</title>
-    <link href="http://yoursite.com/2017/09/18/%E4%BD%BF%E7%94%A8GoogleTTS/"/>
-    <id>http://yoursite.com/2017/09/18/使用GoogleTTS/</id>
+    <link href="https://mr-wind.github.io/2017/09/18/%E4%BD%BF%E7%94%A8GoogleTTS/"/>
+    <id>https://mr-wind.github.io/2017/09/18/使用GoogleTTS/</id>
     <published>2017-09-18T08:08:43.000Z</published>
     <updated>2018-02-12T08:23:22.337Z</updated>
     
@@ -81,14 +81,14 @@
     </summary>
     
     
-      <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
+      <category term="Android" scheme="https://mr-wind.github.io/tags/Android/"/>
     
   </entry>
   
   <entry>
     <title>自定义键盘</title>
-    <link href="http://yoursite.com/2017/02/25/%E8%87%AA%E5%AE%9A%E4%B9%89%E9%94%AE%E7%9B%98/"/>
-    <id>http://yoursite.com/2017/02/25/自定义键盘/</id>
+    <link href="https://mr-wind.github.io/2017/02/25/%E8%87%AA%E5%AE%9A%E4%B9%89%E9%94%AE%E7%9B%98/"/>
+    <id>https://mr-wind.github.io/2017/02/25/自定义键盘/</id>
     <published>2017-02-25T10:54:16.000Z</published>
     <updated>2017-09-15T02:33:31.000Z</updated>
     

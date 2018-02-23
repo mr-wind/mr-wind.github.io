@@ -682,7 +682,7 @@
 		  repo: 'blog-comments',
 		  owner: 'mr-wind',
 		  admin: ['mr-wind'],
-		  id: window.location.pathname,
+		  id: decodeURI(window.location.pathname),
 		  distractionFreeMode: 'true'
 		})
 		gitalk.render('gitalk-container')           

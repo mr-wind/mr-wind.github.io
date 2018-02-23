@@ -707,6 +707,7 @@
 
 
   <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+
   <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
    <script type="text/javascript">
 		var gitalk = new Gitalk({
@@ -715,7 +716,7 @@
 		  repo: 'blog-comments',
 		  owner: 'mr-wind',
 		  admin: ['mr-wind'],
-		  id: Math.random().toString(36).substr(2),
+		  id: decodeURI(location.pathname),
 		  distractionFreeMode: 'true'
 		})
 		gitalk.render('gitalk-container')           

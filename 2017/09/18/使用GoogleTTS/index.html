@@ -693,7 +693,7 @@
 		  repo: 'blog-comments',
 		  owner: 'mr-wind',
 		  admin: ['mr-wind'],
-		  id: md5(location.pathname),
+		  id: Math.random().toString(36).substr(2),
 		  distractionFreeMode: 'true'
 		})
 		gitalk.render('gitalk-container')           

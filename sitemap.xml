@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://mr-wind.github.io/2018/02/01/android%E7%AC%94%E8%AE%B0/</loc>
+    
+    <lastmod>2018-07-11T03:19:09.245Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://mr-wind.github.io/2017/09/19/Gradle%E9%85%8D%E7%BD%AE%E6%8A%80%E5%B7%A7/</loc>
     
     <lastmod>2018-02-12T08:23:46.656Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>https://mr-wind.github.io/2017/09/18/%E4%BD%BF%E7%94%A8GoogleTTS/</loc>
     
     <lastmod>2018-02-12T08:23:22.337Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mr-wind.github.io/2018/02/01/android%E7%AC%94%E8%AE%B0/</loc>
-    
-    <lastmod>2018-02-01T05:58:07.000Z</lastmod>
     
   </url>
   
